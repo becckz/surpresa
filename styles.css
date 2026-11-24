@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b132a;
+    /* Evita qualquer fundo branco nas bordas */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* --- SECÇÃO 1: FNAF --- */
+.fnaf-section {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('./img/Fundo1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-game {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 45px;
+}
+
+.grid-game img {
+    height: 320px;
+    width: auto;
+    object-fit: contain;
+    opacity: .4;
+    border-radius: 8px;
+    transition: .3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.grid-game img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    scale: 1.1;
+    z-index: 1;
+}
+
+.grid-game img:first-child {
+    margin-right: -20px;
+}
+
+.grid-game img:active {
+    scale: 0.9;
+    filter: grayscale(0);
+    opacity: 1;
+    transition: 0.05s;
+}
+
+/* Secção alinhada a partir do topo */
+.lembra-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0b132a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Alinha os elementos a partir do topo */
+    align-items: center;
+    padding: 40px 20px 60px 20px;
+    /* Reduz o espaço no topo (40px) */
+}
+
+/* Título mais afastado do conteúdo abaixo */
+.lembra-title {
+    font-family: 'Cinzel', serif;
+    color: #c8aa6e;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    margin-top: 60px;
+    /* Ajuste fino da posição do topo */
+    margin-bottom: 140px;
+    /* Empurra o Spotify e a foto mais para baixo */
+}
+
+/* Container interno centralizado */
+.lembra-container {
+    width: 100%;
+    max-width: 1250px;
+    /* Mantém o conteúdo interno bem organizado */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 140px;
+    flex-wrap: wrap;
+}
+
+/* Coluna Esquerda */
+.col-left {
+    flex: 1;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.thumb-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.thumb-img {
+    width: 105px;
+    height: 105px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-block: var(--spacing-sm);
+    opacity: .4;
+    border-radius: 4px;
+    transition: .5s;
+    position: relative;
+}
+
+.thumb-img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    scale: 1.1;
+    z-index: 1;
+}
+
+/* Coluna Direita */
+.col-right {
+    flex: 1;
+    max-width: 540px;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-frame {
+    position: relative;
+    border: 2px solid #c8aa6e;
+    padding: 10px;
+}
+
+.main-photo {
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.char-deco {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+.char-top-right {
+    top: -75px;
+    right: -75px;
+    width: 220px;
+}
+
+.char-bottom-left {
+    bottom: -65px;
+    left: -80px;
+    width: 230px;
+}
+
+/* --- DEMAIS SECÇÕES --- */
+.meio-section {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.123)), url('./img/sallyFundo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Conteúdo da Secção 3: caixa de texto à esquerda, slider à direita */
+.meio-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 60px;
+    padding-right: 180px;
+}
+
+.box-wrapper {
+    position: relative;
+    flex: 1;
+    max-width: 660px;
+    margin-left: 50px; /* empurra a caixa e o texto um pouco para a direita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-wrapper .box-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box-texto {
+    position: absolute;
+    inset: 0;
+    padding: 42px 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: left;
+    color: #ffffff;
+    font-family: 'Shantell Sans', cursive;
+    overflow-y: auto;
+}
+
+.box-texto p {
+    margin: 0;
+    width: 100%;
+    font-size: clamp(1rem, 1.35vw, 1.32rem);
+    line-height: 1.55;
+    letter-spacing: 0.2px;
+}
+
+/* ===== Infinite Slider (lado direito da Secção 3) ===== */
+.infinite-slider {
+    overflow: hidden;
+    width: auto;
+    max-width: none;
+    height: 450px;
+    flex-shrink: 0;
+}
+
+.infinite-slider .slider-track {
+    display: flex;
+    width: max-content;
+    gap: 16px;
+    flex-direction: column;
+    animation: slide-vertical linear infinite;
+    animation-duration: var(--duration, 160s);
+}
+
+.infinite-slider[data-reverse="true"] .slider-track {
+    animation-direction: reverse;
+}
+
+@keyframes slide-vertical {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+}
+
+.infinite-slider .slider-track img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    border-radius: 0; /* sem borda arredondada */
+    display: block;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 900px) {
+    .meio-content {
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .box-wrapper {
+        max-width: 90%;
+        margin-left: 0;
+    }
+
+    .box-texto {
+        padding: 22px 26px;
+    }
+
+    .box-texto p {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .infinite-slider {
+        width: 100%;
+        max-width: none;
+        height: 280px;
+    }
+}
+
+.final-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.123)), url('./img/casa.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.final-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    max-width: 750px;
+    width: 100%;
+    margin: 0;
+}
+
+.final-gif {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.final-frase {
+    font-family: 'Zeyada', cursive;
+    color: #ffffff;
+    font-size: 3.4rem;
+    line-height: 1.2;
+    margin: 0;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}

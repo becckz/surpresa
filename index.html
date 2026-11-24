@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parabéns</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=VT323&family=Cinzel:ital,wght@0,700;1,700&family=Mulish:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Zeyada&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <video id="heroVideo" class="hero-video" autoplay muted playsinline>
+    <source src="./vd/meiaNoite.mp4" type="video/mp4">
+  </video>
+
+  <audio id="squeakSound" src="./sons/Squeak.mp3" preload="auto"></audio>
+
+  <!-- Container Geral da Próxima Cena -->
+  <div id="nextScene" style="display: none;">
+
+    <!-- SECÇÃO 1: FNAF (Tela Toda) -->
+    <section class="fnaf-section text-center">
+      <img src="./img/FnafLogo.png" alt="Imagem da Próxima Cena" class="img-fluid">
+
+      <figure class="grid-game">
+        <img src="./img/fox.png" alt="Imagem do Fnaf">
+        <img src="./img/bonnie.png" alt="Imagem do Fnaf">
+        <img src="./img/freddy.png" alt="Imagem do Fnaf">
+        <img src="./img/chica.png" alt="Imagem do Fnaf">
+      </figure>
+    </section>
+
+    <!-- SECÇÃO 2: COISAS QUE ME LEMBRAM VOCÊ (Tela Toda) -->
+    <section class="lembra-section">
+      <h1 class="lembra-title">COISAS QUE QUANDO VEJO PENSO EM VOCÊ</h1>
+
+      <div class="lembra-container">
+        <!-- Coluna Esquerda: Spotify + 4 Fotos -->
+        <div class="col-left">
+          <iframe data-testid="embed-iframe" style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/71dG7kuyvD7ttgDj9Mk6of?utm_source=generator&theme=0&si=647ea56826664f24"
+            width="100%" height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+          <div class="thumb-grid">
+            <img src="./img/coisa1.png" alt="Foto 1" class="thumb-img">
+            <img src="./img/coisa2.png" alt="Foto 2" class="thumb-img">
+            <img src="./img/coisa3.png" alt="Foto 3" class="thumb-img">
+            <img src="./img/coisa4.png" alt="Foto 4" class="thumb-img">
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Foto Principal com Moldura -->
+        <div class="col-right">
+          <div class="photo-frame">
+            <img src="./img/amor.png" alt="Foto Principal" class="main-photo">
+            <img src="./img/yasuo.png" alt="Yasuo" class="char-deco char-top-right">
+            <img src="./img/kayn.png" alt="Kayn" class="char-deco char-bottom-left">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 3: MEIO -->
+    <section class="meio-section">
+      <div class="meio-content">
+        <div class="box-wrapper">
+          <img src="./img/box.png" alt="Caixa de texto" class="box-img">
+          <div class="box-texto">
+            <p>Feliz aniversário, meu amor! Quero que você saiba o quanto eu amo compartilhar os meus dias com você e o quanto eu te amo. Quero estar ao seu lado até o último dia da minha vida, vivendo cada detalhe com você. Obrigado por estar sempre presente quando eu mais preciso, e tenha certeza de que eu vou estar aqui para você em qualquer momento. Quero sempre poder assistir animes com vc, jogar Marvel, Roblox ou qualquer outro jogo q nos faça rir e se divertir juntos, ver vc jogando ou fazendo suas coisinhas, escutar músicas deitada ao seu lado. Espero de coração que você realize cada sonho e conquista que almeja. Vou estar sempre ao seu lado para te apoiar em tudo e construirmos juntos o futuro que a gente merece. Te amooooooo!</p>
+          </div>
+        </div>
+
+        <!-- Infinite Slider: lado direito da secção -->
+        <div class="infinite-slider" data-duration="50" data-duration-hover="80">
+          <div class="slider-track"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECÇÃO 4: FINAL -->
+    <section class="final-section">
+      <div class="final-content">
+        <img src="./vd/fofo.gif" alt="GIF final" class="final-gif">
+        <p class="final-frase">Espero que tenha gostado :3</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
